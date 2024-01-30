@@ -25,7 +25,7 @@ const MyChats = ({fetchAgain}) => {
         },
       };
 
-      const { data } = await axios.get("/api/chat", config);
+      const { data } = await axios.get("https://chatapp-topaz-sigma.vercel.app/", config);
       setChats(data);
       console.log(data,"empty");
     } catch (error) {
