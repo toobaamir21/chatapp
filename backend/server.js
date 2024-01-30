@@ -1,6 +1,5 @@
 require("./config/db");
 const express = require("express");
-const cors = require("cors");
 const app = express();
 const port = 8000;
 const userRoutes = require("./routes/userRoutes");
@@ -8,11 +7,7 @@ const chatRoutes = require("./routes/chatRoutes");
 const messageRoutes = require("./routes/messageRoutes");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 app.use(express.json());
-app.use(cors({
-  origin:["https://chatapp-8oem.vercel.app"],
-  methods:["POST","GET","DELETE","PUT"],
-  credentials:true
-}))
+
 app.get("/", (req, res) => {
   res.send("hello world");
 });
@@ -29,7 +24,7 @@ const server = app.listen(port, () => {
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://chatapp-8oem.vercel.app",
   },
 });
 
