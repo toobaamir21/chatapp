@@ -1,6 +1,7 @@
 {
   "name": "talk-a-tive",
   "version": "1.0.0",
+   "proxy": "https://chatapp-8oem.vercel.app/",
   "description": "",
   "main": "index.js",
   "scripts": {
