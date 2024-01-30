@@ -40,7 +40,7 @@ const {setUser} = ChatState()
       };
 
       const { data } = await axios.post(
-        "/api/user/login",
+        "https://chatapp-topaz-sigma.vercel.app/login",
         { email, password },
         config
       );
