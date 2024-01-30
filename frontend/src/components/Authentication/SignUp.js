@@ -93,7 +93,7 @@ const SignUp = () => {
           },
         };
         const { data } = await axios.post(
-          "/api/user",
+          "https://chatapp-topaz-sigma.vercel.app",
           { name, email, password },
           config
         );
