@@ -83,7 +83,7 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage("");
         const { data } = await axios.post(
-          "/api/message",
+          "https://chatapp-topaz-sigma.vercel.app/",
           {
             content: newMessage,
             chatId: selectedChat,
